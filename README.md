@@ -73,8 +73,4 @@ To run this project, clone the repository, ensure all dependencies are installed
 
 ---
 
-## License
-This project is licensed under the MIT License.
-
----
 
