@@ -1,7 +1,3 @@
-Here's a GitHub README file template based on your project details:
-
----
-
 # Ensembled Prediction of Patient's Length of Stay, Medications, and Postoperative Complications
 
 ## Group Members
