@@ -6,6 +6,15 @@
 - **Abdul Wasi Lone** - Person Number: 50609995
 
 ---
+## Dataset Overview
+1. We address how our method can be useful in cutting costs for the patients and increasing profit for the hospitals due to the optimal allocation of resources.
+
+2. Proper anticipation of the duration of hospitalization, type of medication, and the anesthesia type is of utmost relevance to patients, hospitals, and the insurance companies, and is therefore relevant (popular).
+
+3. The problem has a rich background since the dataset we took was from an exhaustive medical dataset (MOVER: Medical Informatics Operating Room Vitals and Events Repository) from UC Irvine having the hospitalization data of 58,799 patients and 83,468 surgeries (Aprrox. 500 GB). Link to paper: [Mover Dataset](https://www.medrxiv.org/content/10.1101/2023.03.03.23286777v2.full.pdf)
+Login Credentals for the dataset : [Dataset site](https://mover-download.ics.uci.edu/) Username : akhilven , Password : fJqZSWLB02VQ3IAqF 
+
+5. The integration of AI into these healthcare settings which ultimately leads to improvement of patient outcomes (like the length of stay) and Data driven personalized healthcare makes the work viable. Moreover the Optimized resource management as discussed in Q1. holds equal importance towards this direction.
 
 ## Project Overview
 This project uses an ensemble approach to predict a patient's length of stay, required medications, and potential postoperative complications. Our goal is to support healthcare providers in improving resource allocation and enhancing patient care by analyzing and predicting these critical outcomes.
