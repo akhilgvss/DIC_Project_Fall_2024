@@ -16,6 +16,50 @@ Login Credentals for the dataset : [Dataset site](https://mover-download.ics.uci
 
 5. The integration of AI into these healthcare settings which ultimately leads to improvement of patient outcomes (like the length of stay) and Data driven personalized healthcare makes the work viable. Moreover the Optimized resource management as discussed in [Project Document](https://docs.google.com/document/d/17oPCBdx473Aap0shQprmMPKT3NHszan7x9u_0UJei6k/edit?usp=sharing). holds equal importance towards this direction.
 
+---
+# Dataset Usage Instructions
+
+To ensure that the provided Jupyter Notebooks execute correctly, please use the corresponding datasets for each notebook as detailed below.
+
+---
+
+## **Datasets for Akhil's Models**
+For the notebooks:
+- **Model_Training_akhil_Q_1_XGBoost**
+- **Model_Training_akhil_Q_2_CatBoost**
+
+Please use the datasets provided in this Google Drive link:  
+[Datasets for Akhil's Models](https://drive.google.com/drive/folders/1aVNenfwCIbxGtlvMMLr59axqp3AmYKy9?usp=sharing)
+
+---
+
+## **Datasets for Praneeth's Models**
+For the notebooks:
+- **M V N S H Praneeth_Phase 2 ANN**
+- **M V N S H Praneeth_Phase 2 Logistic Regression**
+
+Please use the datasets provided in the same Google Drive link:  
+[Datasets for Praneeth's Models](https://drive.google.com/drive/folders/1aVNenfwCIbxGtlvMMLr59axqp3AmYKy9?usp=sharing)
+
+---
+
+## **Datasets for Wasi's Models**
+For the notebook:
+- **Wasi_50609995_Models**
+
+Please use the datasets provided in this Google Drive link:  
+[Datasets for Wasi's Models](https://drive.google.com/drive/folders/1_6aV6_Ji7RgQ7TQFVpHTIk4kFqd3Bi-W?usp=sharing)
+
+---
+
+## **Important Notes**
+1. **File Path Configuration**: Ensure that you configure the file paths appropriately in the code for the datasets to load properly. Mismatched paths can lead to runtime errors.
+2. **Directory Structure**: Organize your datasets in directories according to the provided paths or adjust the paths in the code as needed.
+3. **Dataset Compatibility**: Verify that the dataset schema matches the requirements of the specific notebook you are executing.
+
+By following these instructions, you will ensure that the code runs efficiently and effectively without any issues.
+
+---
 ## Project Overview
 This project uses an ensemble approach to predict a patient's length of stay, required medications, and potential postoperative complications. Our goal is to support healthcare providers in improving resource allocation and enhancing patient care by analyzing and predicting these critical outcomes.
 
@@ -145,5 +189,221 @@ This project implements a deep learning model to predict the type of anesthesia 
    - Split data into training (80%) and testing (20%) sets
    - Achieved 86% accuracy on the test set
 
+## **Akhil Venkata Shiva Sai**  
+### **Person Number:** 50606819  
 
+---
+
+## Overview
+
+This repository contains two machine learning models implemented to answer critical questions in healthcare, specifically focusing on post-operative trends and gender-based discharge and ICU admission analysis. The repository includes notebooks, graphs, and a detailed report documenting the methodologies, metrics, and results.
+
+---
+
+## Models Used
+
+### **1. XGBoost (Extreme Gradient Boosting)**
+
+#### **Data Preprocessing:**
+- Merged datasets using unique keys created from `MRN_number` and `Log_ID`.
+- Removed duplicate rows and handled imbalanced target classes using SMOTE.
+- Selected critical features based on correlation and domain knowledge.
+
+#### **Model Architecture:**
+- XGBoost uses gradient boosting over decision trees, optimized for numerical and dense data.
+- Hyperparameters tuned: `learning_rate`, `max_depth`, `n_estimators`.
+
+#### **Training:**
+- Trained on post-operative trends using features like `LOS`, `ICU_ADMIN_FLAG`, `WEIGHT`, and `ASA_RATING_C`.
+- Used a 70-30 train-test split and 5-fold cross-validation for robustness.
+
+#### **Evaluation:**
+- Generated Precision-Recall and ROC-AUC curves to assess class separability.
+- Used feature importance analysis to understand contributing factors.
+
+#### **Metrics:**
+- Macro and weighted averages of Precision, Recall, and F1-Score.
+- AUC for multiclass classification demonstrates high performance.
+
+---
+
+### **2. CatBoost (Categorical Boosting)**
+
+#### **Data Preprocessing:**
+- Target column (`DISCH_DISP`) was label-encoded and balanced across classes.
+- Key categorical features like `SEX` and `DISCH_DISP` were retained without extensive preprocessing, leveraging CatBoost's native categorical handling.
+
+#### **Model Architecture:**
+- CatBoost builds gradient-boosted trees optimized for categorical features.
+- Hyperparameters tuned: `depth`, `iterations`, `learning_rate`.
+
+#### **Training:**
+- Trained on features like `SEX`, `LOS`, and `ICU_ADMIN_FLAG` to explore relationships between gender and ICU admissions.
+- Handled imbalanced data using oversampling techniques.
+
+#### **Evaluation:**
+- Confusion matrix and feature importance graphs were generated for better interpretability.
+- Training vs Validation Loss curve ensured consistent learning without overfitting.
+
+#### **Metrics:**
+- Macro averages of Precision, Recall, and F1-Score.
+- Multiclass ROC-AUC demonstrates excellent performance across all categories.
+---
+
+## Relevance to Real-World Healthcare
+
+1. **Cost Reduction for Patients:**  
+   Predicting LOS and ICU admissions helps reduce patient expenses by optimizing resource allocation and reducing complications.
+
+2. **Profitability for Hospitals:**  
+   Efficient ICU and resource management lead to increased patient turnover and revenue generation.
+
+3. **Insurance and Policy Implications:**  
+   Predictions aid insurance companies in better risk assessment and policy-makers in healthcare funding.
+
+4. **Integration of AI:**  
+   - Personalized healthcare through predictive analytics.  
+   - Optimized hospital operations using data-driven insights.
+
+---
+
+## Contents
+
+- `Model_Training_akhil_Q_1_XGBoost.ipynb`: Notebook for XGBoost implementation.
+- `Model_Training_akhil_Q_2_CatBoost.ipynb`: Notebook for CatBoost implementation.
+- `DIC_Phase_2_report_akhil.pdf`: Comprehensive report detailing methodologies, metrics, and results.
+- Supporting Graphs:
+  - Training vs Validation Loss.
+  - Feature Importance Graphs.
+  - Precision-Recall and ROC-AUC Curves.
+  - Confusion Matrices.
+
+---
+## Metrics
+
+### **1. XGBoost**
+
+| **Metric**      | **Value** |
+|------------------|-----------|
+| **Accuracy**     | 98%       |
+| **Macro Precision** | 13%    |
+| **Macro Recall**    | 14%    |
+| **Macro F1-Score**  | 13%    |
+| **Weighted Precision** | 98% |
+| **Weighted Recall**    | 98% |
+| **Weighted F1-Score**  | 98% |
+| **AUC (Area Under Curve)** | Varies per class but exceeds 0.94 across most classes |
+
+**Insights:**
+- The **weighted metrics** are high, reflecting the model's strong performance for dominant classes.  
+- **Macro metrics** are low due to class imbalance, highlighting the challenge of underrepresented classes.
+
+---
+
+### **2. CatBoost**
+
+| **Metric**      | **Value** |
+|------------------|-----------|
+| **Accuracy**     | 96%       |
+| **Macro Precision** | 88%    |
+| **Macro Recall**    | 87%    |
+| **Macro F1-Score**  | 87%    |
+| **Weighted Precision** | 95% |
+| **Weighted Recall**    | 96% |
+| **Weighted F1-Score**  | 96% |
+| **AUC (Area Under Curve)** | Varies per class, exceeding 0.92 for most classes |
+
+**Insights:**
+- The **macro metrics** demonstrate balanced performance across classes.  
+- The ability to handle categorical features natively helped CatBoost perform well on **discharge disposition** analysis.
+
+---
+
+## Conclusion
+
+The XGBoost and CatBoost models demonstrate the transformative potential of AI in healthcare, addressing critical patient outcomes and hospital resource challenges. By leveraging predictive analytics, this project aims to improve patient care and operational efficiency.
+
+---
+## Abdul Wasi Lone
+### **Person Number:** 50609995
+
+## **Introduction**
+This study aims to identify factors that impact the **length of hospitalization for patients** and explore the **relationship between patient characteristics and ASA ratings**. We employed two machine learning algorithms, **Decision Tree Classifier** and **Random Forest Classifier**, to analyze a comprehensive medical dataset and derive actionable insights.
+
+---
+
+## **Dataset Overview**
+The dataset contains various medical features, including:
+
+- **BIRTH_DATE**: Patient age  
+- **GENDER**: Gender of the patient  
+- **ASA_RATING_C**: ASA physical status classification  
+- **AN_TYPE**: Type of anesthesia  
+- **ICU_ADMIN_FLAG**: ICU admission status  
+- **AN_LOS_HOURS**: Length of stay in hours  
+
+---
+
+## **Methodology**
+
+### **Data Preprocessing**
+We implemented the following preprocessing steps:
+1. **Categorical Variable Encoding**: Applied `OneHotEncoder` to encode categorical features.
+2. **Numerical Feature Scaling**: Used `StandardScaler` for scaling numerical data.
+3. **Data Splitting**: Split the dataset into **80% training** and **20% testing**.
+
+### **Model Selection and Justification**
+
+#### **1. Decision Tree Classifier**
+We selected the Decision Tree Classifier due to:
+- **Interpretability**: Aligns well with medical decision-making processes.  
+- **Versatility**: Handles both numerical and categorical data effectively.  
+- **Non-Linear Relationships**: Captures complex relationships between features.
+
+#### **2. Random Forest Classifier**
+We chose the Random Forest Classifier because:
+- **Reduced Overfitting**: Ensemble learning improves generalization.  
+- **Feature Importance**: Provides robust rankings for feature significance.  
+- **High-Dimensional Data**: Handles datasets with high feature complexity effectively.
+
+---
+
+### **Model Tuning**
+
+#### **Decision Tree Classifier**
+We used **GridSearchCV** to tune the following parameters:
+- `max_depth`: [3, 5, 7, 9]  
+- `min_samples_split`: [2, 5, 10]  
+- `min_samples_leaf`: [1, 2, 5, 10]  
+
+**Best Parameters**:  
+- `max_depth=5`, `min_samples_split=2`, `min_samples_leaf=5`
+
+#### **Random Forest Classifier**
+We used **GridSearchCV** to optimize these parameters:
+- `n_estimators`: [100, 200]  
+- `max_features`: ['auto', 'sqrt']  
+- `max_depth`: [10, 20, 30, None]  
+
+**Best Parameters**:  
+- `n_estimators=200`, `max_features='sqrt'`, `max_depth=10`
+
+---
+
+## **Results and Analysis**
+
+### **Decision Tree Classifier**
+| **Metric**                        | **Value**                     |
+|------------------------------------|-------------------------------|
+| **AUC-ROC**                       | 0.9282                        |
+| **Precision-Recall AUC (Macro)**  | 0.7190                        |
+| **Accuracy**                      | 92.74%                        |
+
+---
+
+### **Random Forest Classifier**
+| **Metric**                        | **Value**                     |
+|------------------------------------|-------------------------------|
+| **Best Hyperparameters**          | {'classifier_max_depth': 5, 'classifier_min_samples_split': 2, 'classifier_n_estimators': 100} |
+| **Accuracy**                      | 92.74%                        |
 
