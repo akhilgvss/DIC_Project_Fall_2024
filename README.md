@@ -25,7 +25,7 @@ We utilized the following datasets for our analysis and model training:
 1. **Patient_Information.csv** - Contains demographic, procedural, and clinical details about each patient.
 2. **Patient_Coding.csv** - Provides diagnostic and procedural codes for patient encounters.
 3. **Post_op_complications.csv** - Lists any postoperative complications recorded for patients.
-# Phase 1
+
 ## Data Cleaning and Preprocessing Steps for Patient_Information.csv
 
 The data cleaning steps applied to the `Patient_Information.csv` file include:
@@ -80,70 +80,6 @@ To run this project, clone the repository, ensure all dependencies are installed
 ## Requirements
 - Python libraries: Pandas, NumPy, Scikit-Learn, TensorFlow/PyTorch (for BERT tokenization), Matplotlib/Seaborn (for plotting).
 
-
-# Phase 2
-# M V N S H Praneeth
-# ICU Admission Prediction Model
-
-## Features
-
-- Utilizes key patient data: discharge disposition, length of stay, ASA rating, patient class group, and sex
-- Implements feature scaling and polynomial feature generation
-- Employs grid search for hyperparameter tuning
-- Achieves 82% accuracy in predicting ICU admissions
-
-## Implementation Details
-
-1. **Data Preprocessing**: 
-   - Selected relevant features
-   - Applied standard scaling to normalize the data
-   - Generated polynomial features to capture non-linear relationships
-
-2. **Model Selection**: 
-   - Chose Logistic Regression for its interpretability and efficiency
-   - Used GridSearchCV to optimize hyperparameters
-
-3. **Evaluation**: 
-   - Split data into training (80%) and testing (20%) sets
-   - Evaluated model using accuracy score, classification report, and confusion matrix
-
-## Results
-
-The optimized logistic regression model achieved an accuracy of 82%, demonstrating strong predictive power for ICU admissions based on the given features.
-
-# Anesthesia Type Prediction Model
-
-## Description
-
-This project implements a deep learning model to predict the type of anesthesia used for patients based on various clinical factors, including discharge disposition, length of stay, ICU admission, and patient characteristics. The model uses a neural network architecture to capture complex relationships between the input variables and anesthesia type.
-
-## Features
-
-- Utilizes key patient data: discharge disposition, length of stay, ICU admission flag, weight, sex, patient class, height, and more
-- Implements feature scaling for data normalization
-- Employs a deep neural network with dropout layers for regularization
-- Achieves 86% accuracy in predicting anesthesia type
-
-## Implementation Details
-
-1. **Data Preprocessing**: 
-   - Selected relevant features
-   - Applied standard scaling to normalize the data
-   - Encoded the target variable (anesthesia type) using one-hot encoding
-
-2. **Model Architecture**: 
-   - Implemented a deep neural network using Keras
-   - Used multiple dense layers with SELU and ReLU activations
-   - Applied dropout for regularization to prevent overfitting
-
-3. **Training**: 
-   - Utilized RMSprop optimizer with a learning rate of 0.01
-   - Implemented early stopping to prevent overfitting
-   - Used categorical crossentropy as the loss function
-
-4. **Evaluation**: 
-   - Split data into training (80%) and testing (20%) sets
-   - Achieved 86% accuracy on the test set
-
+---
 
 
