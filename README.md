@@ -407,3 +407,75 @@ We used **GridSearchCV** to optimize these parameters:
 | **Best Hyperparameters**          | {'classifier_max_depth': 5, 'classifier_min_samples_split': 2, 'classifier_n_estimators': 100} |
 | **Accuracy**                      | 92.74%                        |
 
+
+
+
+
+# **Phase 3**
+### Instructions to Build the App from Source Code
+
+#### Step 1: Setting Up the Environment
+1. **Create a Virtual Environment**  
+   Open a terminal and navigate to the project directory. Then, create a virtual environment by running the following command:
+   ```
+   python3 -m venv env
+   ```
+
+2. **Activate the Virtual Environment**  
+   Once the virtual environment is created, activate it:
+   - For macOS/Linux:
+     ```
+     source env/bin/activate
+     ```
+   - For Windows:
+     ```
+     .\env\Scripts\activate
+     ```
+
+3. **Install the Required Dependencies**  
+   After activating the virtual environment, install all necessary dependencies by running:
+   ```
+   pip install -r requirements.txt
+   ```
+   This will install all the packages listed in the `requirements.txt` file.
+
+#### Step 2: Organizing the Project
+
+- **App Code and Models**  
+  Ensure that the application code and the pre-trained models are kept in their respective folders as they are currently. The models are usually located in the `models` folder.
+
+- **Datasets**  
+  The datasets required for the application are in the `app` folder. You need to either:
+  - **Download the datasets** from the `datasets` folder and upload them into MongoDB Compass manually.  
+  - Or, you can **upload them directly** to MongoDB using MongoDB Compass with the correct collection names, as specified in the app code.
+
+#### Step 3: Setting Up MongoDB
+1. **MongoDB Connection**  
+   The app connects to MongoDB using the MongoClient. If you have MongoDB hosted on a local server or use MongoDB Atlas, ensure your connection string is correctly set in the code.
+   
+   The connection string should look something like this:
+   ```
+   mongodb+srv://<username>:<password>@cluster0.i20jf.mongodb.net/
+   ```
+
+2. **Uploading Datasets to MongoDB**  
+   Upload the datasets into MongoDB Compass:
+   - Open **MongoDB Compass** and connect to your MongoDB instance.
+   - Upload the datasets into collections named as they are used in the code (e.g., `Patient_Information`, `Patient_Post_OP`).
+
+#### Step 4: Running the Application
+1. **Start the App**  
+   With all dependencies installed and the virtual environment activated, you can run the app by using the following command:
+   ```
+   streamlit run patient-management-system.py
+   ```
+
+
+2. **Operating the Functionalities**  
+   The application includes several functionalities:
+   - **View/Edit Patient Data**: You can search for a patient's data and make updates.
+   - **Add New Patient**: You can add new patient records.
+   - **Delete Patient**: You can delete patient records.
+   - **Predict Outcomes**: You can predict outcomes like post-operative complications, discharge disposition, anesthesia type, and length of stay based on patient data.
+
+
