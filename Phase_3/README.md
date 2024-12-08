@@ -1,4 +1,4 @@
-# Ensembled Prediction of Patient's Length of Stay, Medications, and Postoperative Complications
+# Towards Personalized Perioperative Care: Predicting Duration of Hospitalization and Postoperative Complications
 
 ## **Group Members**
 - **M V N S H Praneeth** - Person Number: 50592326  
