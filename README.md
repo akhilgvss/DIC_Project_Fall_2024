@@ -467,7 +467,7 @@ We used **GridSearchCV** to optimize these parameters:
 1. **Start the App**  
    With all dependencies installed and the virtual environment activated, you can run the app by using the following command:
    ```
-   streamlit run patient-management-system.py
+   streamlit run app.py
    ```
 
 
