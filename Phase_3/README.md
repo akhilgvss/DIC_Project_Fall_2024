@@ -14,7 +14,7 @@ For the notebooks:
 
 Please use the datasets provided in this link:  
 **Datasets for Akhil's Models**:  
-`50592326_50609995_50606819_phase_3\app\Processed_patient_post_op_complications_Final.csv`
+`Phase_3\app\Datasets\Processed_patient_post_op_complications_Final.csv`
 
 ---
 
@@ -25,7 +25,7 @@ For the notebooks:
 
 Please use the datasets provided in the same link:  
 **Datasets for Praneeth's Models**:  
-`50592326_50609995_50606819_phase_3\app\Patient_information_Final.csv`
+`Phase_3\app\Datasets\Patient_information_Final.csv`
 
 ---
 
@@ -35,7 +35,7 @@ For the notebook:
 
 Please use the datasets provided in this link:  
 **Datasets for Wasi's Models**:  
-`50592326_50609995_50606819_phase_3\app\Patient_information_Final.csv`
+`Phase_3\app\Datasets\Patient_information_Final.csv`
 
 ---
 
