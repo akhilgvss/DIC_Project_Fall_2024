@@ -48,8 +48,8 @@ We utilized the following datasets for our analysis and model training:
 ---
 
 ## **Folder Structure Information**
-- **`app`**: Contains folder named `Hospital_webapp`, and the two required datasets.  
-- **`exp`**: Contains the Python codes for all four models implemented in the web app, the questions used by team members, and the analysis of the questions.  
+- **`app`**: Contains folders named Datasets, app_code and models. app_code folder consists of app.py file and requirements.txt file.  
+- **`exp`**: Contains the folders named Phase_1 and Phase_2 consisting of Python codes, the questions used by team members, and the analysis of the questions.  
 - **Root Folder**: Consists of the final report and the description video.  
 
 ---
