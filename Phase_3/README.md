@@ -58,7 +58,7 @@ We utilized the following datasets for our analysis and model training:
 
 ### **1. XGBoost (Extreme Gradient Boosting)**  
 Located in:  
-`50592326_50609995_50606819_phase_3\exp\Model_Training_akhil_Q_1_XGBoost.ipynb`
+`Phase_3\exp\Phase_2\Model_Training_akhil_Q_1_XGBoost.ipynb`
 
 #### **Data Preprocessing:**
 - Merged datasets using unique keys created from `MRN_number` and `Log_ID`.  
@@ -85,7 +85,7 @@ Located in:
 
 ### **2. CatBoost (Categorical Boosting)**  
 Located in:  
-`50592326_50609995_50606819_phase_3\exp\Model_Training_akhil_Q_2_CatBoost.ipynb`
+`Phase_3\exp\Phase_2\Model_Training_akhil_Q_2_CatBoost.ipynb`
 
 #### **Data Preprocessing:**
 - Target column (`DISCH_DISP`) was label-encoded and balanced across classes.  
@@ -111,7 +111,7 @@ Located in:
 
 ### **3. Decision Tree Classifier**  
 Located in:  
-`50592326_50609995_50606819_phase_3\exp\Wasi_50609995_Models.ipynb`
+`Phase_3\exp\Phase_2\Wasi_50609995_Models.ipynb`
 
 #### **Reasons for Selection:**
 - **Interpretability**: Aligns well with medical decision-making processes.  
@@ -122,7 +122,7 @@ Located in:
 
 ### **4. Random Forest Classifier**  
 Located in:  
-`50592326_50609995_50606819_phase_3\exp\Wasi_50609995_Models.ipynb`
+`Phase_3\exp\Phase_2\Wasi_50609995_Models.ipynb`
 
 #### **Reasons for Selection:**
 - **Reduced Overfitting**: Ensemble learning improves generalization.  
@@ -132,7 +132,8 @@ Located in:
 ---
 
 ### **5. Anesthesia Type Prediction Model**
-
+Located in:  
+`Phase_3\exp\Phase_2\M V N S H Praneeth_Phase 2 ANN.ipynb`
 #### **Model Architecture:**
 - Implemented a deep neural network using Keras.  
 - Used multiple dense layers with SELU and ReLU activations.  
